@@ -7,7 +7,7 @@ export default async function (hre: HardhatRuntimeEnvironment) {
   const wallet = new Wallet('<WALLET_PRIVATE_KEY>');
   const deployer = new Deployer(hre, wallet);
   const factoryArtifact = await deployer.loadArtifact('AAFactory');
-  const aaArtifact = await deployer.loadArtifact('TwoUserMultisig');
+  const aaArtifact = await deployer.loadArtifact('ERC1967Proxy');
 
   // Deposit some funds to L2 in order to be able to perform L2 transactions.
   // You can remove the depositing step if the `wallet` has enough funds on zkSync
